@@ -1,0 +1,77 @@
+{
+  "description": "Hand-written retrieval eval set. Each query has one or more answer substrings that must appear verbatim (case- and whitespace-insensitive) in a relevant passage. A retrieved chunk is judged relevant if it contains any of the substrings. Substrings are short canonical phrases from the bundled public-domain corpus to stay stable across editions; if scripts/00_prepare_corpus.py warns that a substring is missing, adjust it to match your fetched edition.",
+  "queries": [
+    {
+      "id": "alice_rabbit_hole",
+      "question": "What did Alice fall down at the start of her adventure?",
+      "answers": ["down the rabbit-hole"],
+      "source": "alice_in_wonderland.txt"
+    },
+    {
+      "id": "alice_white_rabbit",
+      "question": "What was the White Rabbit worried about being?",
+      "answers": ["I shall be late"],
+      "source": "alice_in_wonderland.txt"
+    },
+    {
+      "id": "alice_eat_me",
+      "question": "What was written on the little cake Alice found?",
+      "answers": ["EAT ME"],
+      "source": "alice_in_wonderland.txt"
+    },
+    {
+      "id": "alice_curiouser",
+      "question": "What did Alice exclaim when she started growing?",
+      "answers": ["Curiouser and curiouser"],
+      "source": "alice_in_wonderland.txt"
+    },
+    {
+      "id": "timemachine_traveller",
+      "question": "What name is given to the man explaining time travel?",
+      "answers": ["Time Traveller"],
+      "source": "the_time_machine.txt"
+    },
+    {
+      "id": "timemachine_dimension",
+      "question": "How does the Time Traveller describe time relative to space?",
+      "answers": ["Fourth Dimension"],
+      "source": "the_time_machine.txt"
+    },
+    {
+      "id": "timemachine_eloi",
+      "question": "What are the small, gentle future people called?",
+      "answers": ["Eloi"],
+      "source": "the_time_machine.txt"
+    },
+    {
+      "id": "timemachine_morlocks",
+      "question": "What are the underground creatures in the future called?",
+      "answers": ["Morlocks"],
+      "source": "the_time_machine.txt"
+    },
+    {
+      "id": "scarlet_meeting",
+      "question": "How does Watson describe first meeting Holmes over a discovery?",
+      "answers": ["I've found it"],
+      "source": "a_study_in_scarlet.txt"
+    },
+    {
+      "id": "scarlet_afghanistan",
+      "question": "Where had Watson served as an army doctor before meeting Holmes?",
+      "answers": ["Afghanistan"],
+      "source": "a_study_in_scarlet.txt"
+    },
+    {
+      "id": "scarlet_rache",
+      "question": "What word was written in blood on the wall at the crime scene?",
+      "answers": ["RACHE"],
+      "source": "a_study_in_scarlet.txt"
+    },
+    {
+      "id": "scarlet_baker_street",
+      "question": "What is the address of the rooms Holmes and Watson share?",
+      "answers": ["Baker Street"],
+      "source": "a_study_in_scarlet.txt"
+    }
+  ]
+}

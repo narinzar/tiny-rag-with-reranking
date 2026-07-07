@@ -1,0 +1,16 @@
+# Core RAG stack.
+#
+# torch: install the CUDA build FIRST from the cu128 index so it matches an
+# RTX 5090 (sm_120), then install the rest of this file. Example:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+#   pip install -r requirements.txt
+# On a CPU-only machine, a plain `pip install torch` also works.
+torch
+sentence-transformers
+transformers
+faiss-cpu
+numpy
+tqdm
+matplotlib
+pytest
+python-dotenv
