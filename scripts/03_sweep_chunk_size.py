@@ -68,6 +68,13 @@ def main() -> int:
         hits = idx.search(qvec, k)[0]
         return [h.chunk_id for h in hits]
 
+    def kwargs_for_size(size: int) -> dict:
+        if args.strategy == "adaptive":
+            # adaptive requires 0 <= min_tokens <= target_tokens; clamp so small
+            # target sizes stay valid while larger ones keep the default of 48.
+            return {"target_tokens": size, "min_tokens": min(48, size)}
+        return {"chunk_tokens": size}
+
     rows = []
     for size in tqdm(args.sizes, desc="sweep"):
         row = sweep_chunk_sizes(
@@ -77,6 +84,7 @@ def main() -> int:
             k=args.k,
             retrieve_fn=retrieve_fn,
             strategy=args.strategy,
+            strategy_kwargs_for_size=kwargs_for_size,
         )[0]
         rows.append(row)
 

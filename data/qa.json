@@ -52,7 +52,7 @@
     {
       "id": "scarlet_meeting",
       "question": "How does Watson describe first meeting Holmes over a discovery?",
-      "answers": ["I've found it"],
+      "answers": ["I’ve found it"],
       "source": "a_study_in_scarlet.txt"
     },
     {
